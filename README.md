@@ -368,8 +368,8 @@ The key insight is that CFS doesn't use fixed time slices. Instead, it tracks "v
 
 | Container | Nice Value | Duration (s) | Completion Time (s) | Accumulator (final) |
 |-----------|-----------|--------------|---------------------|---------------------|
-| cpu-hi | -10 | 20 | *measured* | *measured* |
-| cpu-lo | 10 | 20 | *measured* | *measured* |
+| cpu-hi | -10 | 20 | 20 | 4863323828404859313 |
+| cpu-lo | 10 | 20 | 20 | 11991639366096117981 |
 
 **Analysis:** The higher-priority container (nice -10) should complete in approximately the configured duration, while the lower-priority container (nice 10) takes significantly longer because CFS allocates it a smaller proportion of CPU time. The ratio of completion times should approximately reflect the weight ratio derived from the nice difference.
 
