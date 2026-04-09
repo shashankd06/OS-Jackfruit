@@ -377,7 +377,7 @@ The key insight is that CFS doesn't use fixed time slices. Instead, it tracks "v
 
 | Container | Workload | Nice | Completion Time (s) | Notes |
 |-----------|----------|------|--------------------:|-------|
-| cpu-test | cpu_hog 15 | 0 | *measured* | CPU utilization ~100% |
-| io-test | io_pulse 40 100 | 0 | *measured* | I/O iterations every ~100ms |
+| cpu-test | cpu_hog 15 | 0 | 15 | CPU utilization ~100% |
+| io-test | io_pulse 40 100 | 0 | ~4.0 | I/O iterations every ~100ms |
 
 **Analysis:** Despite running at the same nice value, the I/O-bound process (`io_pulse`) should maintain its target iteration interval (~100ms) with minimal deviation. CFS's "sleeper fairness" mechanism credits sleeping processes with lower vruntime, ensuring they're scheduled promptly when they wake. The CPU-bound process sees near-full CPU utilization during the I/O process's sleep periods, demonstrating efficient work-conserving scheduling.
