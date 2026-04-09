@@ -160,8 +160,8 @@ sudo rmmod monitor
 
 Two containers (`alpha` and `beta`) running under the supervisor. The `engine ps` command shows both containers in the `running` state with their PIDs, memory limits, and start times. This demonstrates multi-container supervision, metadata tracking, and CLI/IPC all at once.
 
-<!-- PASTE SCREENSHOT 1 HERE -->
-*Replace this line with your screenshot image*
+<img width="975" height="200" alt="image" src="https://github.com/user-attachments/assets/5dd25c4c-852f-4cf3-8f3b-f19bc63723a4" />
+
 
 ---
 
