@@ -169,8 +169,8 @@ Two containers (`alpha` and `beta`) running under the supervisor. The `engine ps
 
 Output of `engine logs alpha`, showing stdout captured from the container via the pipe → producer → bounded buffer → consumer → log file pipeline.
 
-<!-- PASTE SCREENSHOT 2 HERE -->
-*Replace this line with your screenshot image*
+<img width="975" height="127" alt="image" src="https://github.com/user-attachments/assets/18578d9c-d538-430b-ba2a-df785bf1f72f" />
+
 
 ---
 
@@ -178,8 +178,7 @@ Output of `engine logs alpha`, showing stdout captured from the container via th
 
 The `memtest` container running `memory_hog` exceeds its soft limit (24 MiB) first, then its hard limit (48 MiB). The `engine ps` output shows `memtest` in the `killed` state with exit code `137` (SIGKILL).
 
-<!-- PASTE SCREENSHOT 3 HERE -->
-*Replace this line with your screenshot image*
+<img width="975" height="210" alt="image" src="https://github.com/user-attachments/assets/fffaa0b1-adcf-435e-b9a4-05a1d5c6bde3" />
 
 ---
 
@@ -187,8 +186,7 @@ The `memtest` container running `memory_hog` exceeds its soft limit (24 MiB) fir
 
 Kernel ring buffer output (`dmesg | grep container_monitor`) showing the sequence of events: module load → container registrations → soft limit warning → hard limit kill → unregistration.
 
-<!-- PASTE SCREENSHOT 4 HERE -->
-*Replace this line with your screenshot image*
+<img width="975" height="179" alt="image" src="https://github.com/user-attachments/assets/3325efab-5394-484e-b4d8-0fb02d444809" />
 
 ---
 
@@ -196,8 +194,8 @@ Kernel ring buffer output (`dmesg | grep container_monitor`) showing the sequenc
 
 Two `cpu_hog` containers running simultaneously with `nice -10` (high priority) and `nice 10` (low priority). The logs show the high-priority container's accumulator advancing significantly faster, demonstrating CFS proportional scheduling.
 
-<!-- PASTE SCREENSHOT 5 HERE -->
-*Replace this line with your screenshot image*
+<img width="975" height="948" alt="image" src="https://github.com/user-attachments/assets/5e2ae5d4-5575-4818-ab08-99e04e9173e3" />
+
 
 ---
 
@@ -205,8 +203,10 @@ Two `cpu_hog` containers running simultaneously with `nice -10` (high priority) 
 
 A `cpu_hog` and `io_pulse` container running simultaneously at the same nice value. The `io_pulse` maintains consistent iteration intervals despite CPU competition, demonstrating CFS's sleeper fairness.
 
-<!-- PASTE SCREENSHOT 6 HERE -->
-*Replace this line with your screenshot image*
+<img width="975" height="890" alt="image" src="https://github.com/user-attachments/assets/65eabb45-9314-4731-8c2a-20600c7d6e04" />
+<img width="975" height="304" alt="image" src="https://github.com/user-attachments/assets/af659d52-ef65-467f-9db2-d21479221793" />
+
+
 
 ---
 
@@ -214,8 +214,8 @@ A `cpu_hog` and `io_pulse` container running simultaneously at the same nice val
 
 All containers stopped, supervisor terminated via SIGTERM, no zombie processes remaining (`ps aux` shows clean), kernel module unloaded successfully.
 
-<!-- PASTE SCREENSHOT 7 HERE -->
-*Replace this line with your screenshot image*
+<img width="975" height="325" alt="image" src="https://github.com/user-attachments/assets/d2b0d310-4536-4e91-b2fc-676a9f243e19" />
+
 
 ---
 
