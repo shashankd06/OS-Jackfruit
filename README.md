@@ -6,8 +6,8 @@ A lightweight Linux container runtime in C with a long-running parent supervisor
 
 | Name | SRN |
 |------|-----|
-| [Your Name] | [Your SRN] |
-| [Partner Name] | [Partner SRN] |
+| Shashank D | PES1UG24CS433 |
+| Shashank Keshava Murthy | PES1UG24CS434 |
 
 ---
 
